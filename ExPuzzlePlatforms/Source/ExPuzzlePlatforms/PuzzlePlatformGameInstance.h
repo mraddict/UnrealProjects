@@ -23,4 +23,10 @@ public:
 	virtual void Init() override;
 	/** virtual function to allow custom GameInstances an opportunity to do cleanup when shutting down */
 	virtual void Shutdown() override;
+
+	//
+	UFUNCTION(Exec)
+	void Host();
+	UFUNCTION(Exec)
+	void Join(const FString& Address);
 };
